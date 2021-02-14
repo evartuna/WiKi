@@ -12,7 +12,19 @@ var template = {
       <head>
       <title>WIKI - ${title}</title>
       <meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
-    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+      <!-- Global site tag (gtag.js) - Google Analytics -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-E5PVVKQJT2"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+      
+        gtag('config', 'G-E5PVVKQJT2');
+      </script>
+
     <style>
     html,body{margin:0;padding:0}
 body{font: 76% arial,sans-serif;text-align:center}
@@ -82,15 +94,6 @@ div#footer{clear:left;width:100%}
   }
 }
 
-function popup() {
-  var a=0;
-  if(a!=0)
-    return confirm('Do you really want to submit the form?')
-  else{
-    alert('xx')
-    return false;
-  }
-  }
 
 var app = http.createServer(function (request, response) {
   var _url = request.url;
@@ -219,4 +222,4 @@ var app = http.createServer(function (request, response) {
 
 });
 
-app.listen(3000);
+app.listen(80);
